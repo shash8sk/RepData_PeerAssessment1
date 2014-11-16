@@ -1,10 +1,10 @@
 ---
 title: 'Reproducible Research: Peer Assessment 1'
 output:
-  word_document: default
+  html_document: default
   keep_md: yes
   pdf_document: default
-  html_document: null
+  word_document: default
 ---
 
 
@@ -23,7 +23,7 @@ unlink(temp)
 
 ## What is mean total number of steps taken per day?
 
-```{r}
+```{r  message=FALSE}
 data.nmis <- data[!is.na(data$steps),]
 library(dplyr)
 library(ggplot2)
@@ -61,7 +61,7 @@ plot(timestep$interval, timestep$avgsteps, type="l", xlab="time (5 min interval 
 ```
   
   
-5-min interval that contaisn the maximum average steps
+5-min interval that contains the maximum average steps
   
   
 ```{r}
